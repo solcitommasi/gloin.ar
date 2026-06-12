@@ -106,6 +106,60 @@
         };
     </script>
 <style>
+        .liquid-glass-btn {
+            background: linear-gradient(135deg, rgba(89, 165, 169, 0.3) 0%, rgba(53, 104, 106, 0.15) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(89, 165, 169, 0.45);
+            border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+            border-radius: 9999px !important;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2), 
+                        inset 0 -8px 16px rgba(0, 0, 0, 0.1);
+            color: #ffffff !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .liquid-glass-btn:hover {
+            background: linear-gradient(135deg, rgba(89, 165, 169, 0.5) 0%, rgba(53, 104, 106, 0.25) 100%);
+            border-color: rgba(89, 165, 169, 0.6);
+            border-top-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 12px 40px 0 rgba(89, 165, 169, 0.5), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.3), 
+                        inset 0 -8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .liquid-glass-btn:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        .liquid-glass-btn-secondary {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(89, 165, 169, 0.3);
+            border-top: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 9999px !important;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1), 
+                        inset 0 -8px 16px rgba(0, 0, 0, 0.05);
+            color: #ffffff !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .liquid-glass-btn-secondary:hover {
+            background: linear-gradient(135deg, rgba(89, 165, 169, 0.15) 0%, rgba(53, 104, 106, 0.1) 100%);
+            border-color: rgba(89, 165, 169, 0.5);
+            border-top-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(89, 165, 169, 0.3), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            color: #ffffff !important;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .liquid-glass-btn-secondary:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
         body {
             background: linear-gradient(135deg, #1E2528 0%, #101414 100%);
             background-attachment: fixed;
@@ -213,7 +267,7 @@
   <a class="py-4 text-xl text-on-surface-variant hover:text-primary transition-colors font-headline-md border-b border-outline-variant/30" href="#tecnologia">Tecnología</a>
   <a class="py-4 text-xl text-on-surface-variant hover:text-primary transition-colors font-headline-md border-b border-outline-variant/30" href="#proyectos">Proyectos</a>
   <a class="py-4 text-xl text-on-surface-variant hover:text-primary transition-colors font-headline-md border-b border-outline-variant/30" href="#contacto">Contacto</a>
-  <a href="#contacto" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-lg hover:scale-105 transition-transform duration-300 cta-glow active:scale-95 mt-8 text-center">
+  <a href="#contacto" class="liquid-glass-btn px-8 py-4 rounded-full font-label-md text-lg mt-8 text-center block">
     Cotizar Proyecto
   </a>
 </div>
@@ -233,7 +287,7 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contacto">Contacto</a>
 </div>
 <div class="flex items-center gap-4">
-<a href="#contacto" class="bg-primary text-on-primary px-6 py-2 rounded font-label-md hover:scale-105 transition-transform duration-300 cta-glow active:scale-95 hidden md:inline-block text-center">
+<a href="#contacto" class="liquid-glass-btn px-6 py-2 rounded-full font-label-md hidden md:inline-block text-center">
             Cotizar Proyecto
         </a>
 <!-- Hamburger Button (Mobile) -->
@@ -261,17 +315,17 @@
             Líderes en fabricación industrial de aberturas de PVC y DVH
         </p>
 <div class="flex flex-col md:flex-row gap-gutter justify-center mt-6 md:mt-stack-lg w-full max-w-md md:max-w-none px-4">
-<a href="#contacto" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-lg hover:scale-105 transition-transform cta-glow text-center block md:inline-block">
+<a href="#contacto" class="liquid-glass-btn px-8 py-4 rounded-full font-label-md text-lg text-center block md:inline-block">
                 Solicitar Presupuesto
             </a>
-<a href="#tecnologia" class="border border-primary text-primary px-8 py-4 rounded-lg font-label-md text-lg hover:bg-primary/10 transition-colors text-center block md:inline-block mt-4 md:mt-0">
+<a href="#tecnologia" class="liquid-glass-btn-secondary px-8 py-4 rounded-full font-label-md text-lg text-center block md:inline-block mt-4 md:mt-0">
                 Ver Catálogo Técnico
             </a>
 </div>
 </div>
 </section>
 <!-- Tecnología Section -->
-<section class="py-12 md:py-24 px-margin-mobile max-w-container-max mx-auto" id="tecnologia">
+<section class="pt-12 pb-6 md:pt-24 md:pb-10 px-margin-mobile max-w-container-max mx-auto" id="tecnologia">
 <div class="flex flex-col mb-stack-lg border-l-4 border-primary pl-stack-md">
 <span class="text-primary font-label-caps uppercase tracking-widest text-xs">Excelencia Industrial</span>
 <h2 class="text-2xl md:text-3xl font-bold text-primary mt-1">Nuestra Tecnología</h2>
@@ -327,7 +381,7 @@
 </div>
 </section>
 <!-- Galería In & Out -->
-<section class="py-12 md:py-24 bg-transparent relative overflow-hidden" id="proyectos">
+<section class="pt-6 pb-12 md:pt-10 md:pb-24 bg-transparent relative overflow-hidden" id="proyectos">
 <div class="absolute inset-0 pointer-events-none opacity-10">
 <div class="grid-line absolute top-0 left-1/4 w-[1px] h-full"></div>
 <div class="grid-line absolute top-0 left-2/4 w-[1px] h-full"></div>
@@ -533,7 +587,7 @@
 <span id="error-contact-message" class="hidden text-xs text-[#ffb4ab] mt-1 block"></span>
 </div>
 <div id="form-alert" class="hidden p-4 rounded-lg text-sm transition-all duration-300"></div>
-<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-xl cta-glow" type="submit">
+<button class="w-full liquid-glass-btn py-4 rounded-full font-bold" type="submit">
                     Enviar Consulta Técnica
                 </button>
 </form>
